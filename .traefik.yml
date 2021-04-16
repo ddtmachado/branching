@@ -1,0 +1,11 @@
+displayName: Branching
+type: middleware
+import: github.com/ddtmachado/branching
+summary: Branching allows you to select an alternative middleware chain based on conditions evaluated from the request
+
+testData:
+  Condition: "Header[`Foo`].0 == `bar`"
+  Chain:
+    test-prefix:
+      AddPrefix:
+        Prefix: "/test"
